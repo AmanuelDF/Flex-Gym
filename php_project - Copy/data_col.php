@@ -75,10 +75,23 @@ session_start();
                 <option value="intermediate">Intermediate</option>
                 <option value="advanced">Advanced</option>
             </select>
+
+        </div>
+        <div class="infotype">
+            <label for="goal">What is your workout goal:</label>
+            <select name="goal" id="intensity">
+                <option value="" disabled selected>Choose a workout goal</option>
+                <option value="bulk">I want to bulk</option>
+                <option value="lean">I want to get lean</option>
+                <option value="strength">I want to build strength</option>
+                <option value="cardio">I want to improve cardio</option>
+                <option value="general_fitness">I want general fitness</option>
+            </select>
         </div>
         <div>
             <center> <button type="submit" id="start" name="start">start</button></center>
         </div>
+
 
 
         </form>
@@ -95,22 +108,25 @@ if (isset($_POST['start'])) {
     $weight = $_POST['weight'];
     $disease = $_POST['disease'];
     $intensity = $_POST['intensity'];
+    $goal = $_POST['goal'];
     $email = $_SESSION['email'];
 
     $_SESSION['age'] = $age;
     $_SESSION['weight'] = $weight;
     $_SESSION['disease'] = $disease;
     $_SESSION['intensity'] = $intensity;
+    $_SESSION['goal'] = $goal;
     include_once 'connect.php';
 
     $db = new PersonalDB();
 
-    if ($db->addMoreInfo($age, $gender, $weight, $disease, $intensity, $email)) {
+    if ($db->addMoreInfo($age, $gender, $weight, $disease, $intensity, $email, $goal)) {
 
         $_SESSION['age'] = $age;
         $_SESSION['weight'] = $weight;
         $_SESSION['disease'] = $disease;
         $_SESSION['intensity'] = $intensity;
+        $_SESSION['goal'] = $goal;
 
         echo '<script>window.location.href = "planmaker.php";</script>';
     } else echo "couldn't access the database";

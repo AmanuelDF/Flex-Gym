@@ -26,10 +26,10 @@ class PersonalDB
             return false;
         }
     }
-    public function addMoreInfo($age, $gender, $weight, $disease, $intensity, $email)
+    public function addMoreInfo($age, $gender, $weight, $disease, $intensity, $email, $goal)
     {
         echo "";
-        $sql = "UPDATE personal_info SET age='$age', gender='$gender', weight='$weight', disease='$disease', intensity='$intensity' WHERE email='$email'";
+        $sql = "UPDATE personal_info SET age='$age', gender='$gender', weight='$weight', disease='$disease', intensity='$intensity', goal='$goal' WHERE email='$email'";
         $result = mysqli_query($this->conn, $sql);
         if (!$result) {
             echo "couldn't add the data to the database";
@@ -96,7 +96,7 @@ class PersonalDB
                 $exercise['name'] = $row['name'];
                 $exercise['image'] = $row['image_path'];
                 $exercise['video'] = $row['video'];
-
+                $exercise['calories'] = $row['calories_burned_per_hour'];
                 $exercises[] = $exercise;
             }
             while ($row = mysqli_fetch_assoc($result2)) {
