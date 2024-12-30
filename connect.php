@@ -3,8 +3,8 @@
 class PersonalDB
 {
     private $server = 'localhost';
-    private $user = 'user';
-    private $password = 'amanuel@123';
+    private $user = 'root';
+    private $password = '';
     private $db_name = 'user_data';
     public $conn;
 

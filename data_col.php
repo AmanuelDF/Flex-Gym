@@ -23,7 +23,7 @@ session_start();
 
 <body>
     <div class="home">
-        <a href="homepage.php"><img class="logo_img" src="flex-low-resolution-logo-color-on-transparent-background.png" alt="home" /></a>
+        <a href="/flex_v1/homepage.php"><img class="logo_img" src="flex-low-resolution-logo-color-on-transparent-background.png" alt="home" /></a>
     </div>
     <div class="info">
         <div id="title">

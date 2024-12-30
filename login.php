@@ -42,7 +42,7 @@ if (isset($_COOKIE['email'])) {
 
 <body>
     <div class="home">
-        <a href="flexhome.html"><img class="logo_img" src="flex-low-resolution-logo-color-on-transparent-background.png" alt="home" /></a>
+        <a href="/flex_v1/homepage.php"><img class="logo_img" src="flex-low-resolution-logo-color-on-transparent-background.png" alt="home" /></a>
     </div>
     <div class="login">
         <div id="title">Login</div>
