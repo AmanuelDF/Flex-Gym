@@ -1,0 +1,98 @@
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(30, 30, 30);
+            color: white;
+            font-family: Quicksand, Arial;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            background-color: #333;
+            color: #fff;
+            overflow-y: auto;
+            transition: width 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar:hover {
+            width: 200px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            flex-grow: 1;
+        }
+
+        .sidebar li {
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+        }
+
+        .sidebar li:hover {
+            background-color: #555;
+        }
+
+        .sidebar a {
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .sidebar i {
+            margin-right: 10px;
+            font-size: 24px;
+        }
+
+        .sidebar span {
+            display: none;
+        }
+
+        .sidebar:hover span {
+            display: inline;
+        }
+
+        .sidebar .logout {
+            margin-top: auto;
+        }
+
+        .sidebar .logout a {
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar .logout a:hover {
+            background-color: #555;
+        }
+
+        .content {
+            margin-left: 100px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content p {
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        .content p:first-child {
+            font-size: 24px;
+            font-weight: bold;
+        }
